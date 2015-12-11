@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D609CB30-0076-4BE8-A5CA-E39AAD88F805}</ProjectGuid>
+    <RootNamespace>Armadillo</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)\Libraries\glew-1.13.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BrowseInformation>true</BrowseInformation>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>$(SolutionDir)\Libraries\glew-1.13.0\lib\Release\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)\Libraries\glew-1.13.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>$(SolutionDir)\Libraries\glew-1.13.0\lib\Release\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Font\Character.cpp" />
+    <ClCompile Include="Font\FontFile.cpp" />
+    <ClCompile Include="Graphics\Colour.cpp" />
+    <ClCompile Include="Graphics\Fermat.cpp" />
+    <ClCompile Include="Graphics\FloatBuffer.cpp" />
+    <ClCompile Include="Graphics\FrameBuffer.cpp" />
+    <ClCompile Include="Graphics\FrameEffect.cpp" />
+    <ClCompile Include="Graphics\IndexBuffer.cpp" />
+    <ClCompile Include="Graphics\lodepng.cpp" />
+    <ClCompile Include="Graphics\ModelData.cpp" />
+    <ClCompile Include="Graphics\Renderer.cpp" />
+    <ClCompile Include="Graphics\Shader.cpp" />
+    <ClCompile Include="Graphics\ShaderFactory.cpp" />
+    <ClCompile Include="Graphics\ShaderLoader.cpp" />
+    <ClCompile Include="Graphics\Skybox.cpp" />
+    <ClCompile Include="Graphics\Texture.cpp" />
+    <ClCompile Include="Graphics\UniformBuffer.cpp" />
+    <ClCompile Include="Graphics\VertexBuffer.cpp" />
+    <ClCompile Include="Graphics\View.cpp" />
+    <ClCompile Include="Management\Input.cpp" />
+    <ClCompile Include="Management\EntityControl.cpp" />
+    <ClCompile Include="Management\Logger.cpp" />
+    <ClCompile Include="Management\Manager.cpp" />
+    <ClCompile Include="Maths\MathHelper.cpp" />
+    <ClCompile Include="Maths\PerlinNoise.cpp" />
+    <ClCompile Include="Maths\Random.cpp" />
+    <ClCompile Include="Maths\StringHelper.cpp" />
+    <ClCompile Include="Maths\VectorMath.cpp" />
+    <ClCompile Include="Osiris.cpp" />
+    <ClCompile Include="Graphics\Projection.cpp" />
+    <ClCompile Include="Physics\EntityList.cpp" />
+    <ClCompile Include="Physics\PhysicsConstants.cpp" />
+    <ClCompile Include="Physics\PhysicsEntity.cpp" />
+    <ClCompile Include="Physics\PhysicsWorld.cpp" />
+    <ClCompile Include="Physics\Renderer_TS.cpp" />
+    <ClCompile Include="World\Biome.cpp" />
+    <ClCompile Include="World\Direction.cpp" />
+    <ClCompile Include="World\Entity.cpp" />
+    <ClCompile Include="World\EntityTree.cpp" />
+    <ClCompile Include="World\EntityTypes.cpp" />
+    <ClCompile Include="World\Landscape.cpp" />
+    <ClCompile Include="World\Light.cpp" />
+    <ClCompile Include="World\RayCaster.cpp" />
+    <ClCompile Include="World\Seed.cpp" />
+    <ClCompile Include="World\Terrain.cpp" />
+    <ClCompile Include="World\TerrainBuffer.cpp" />
+    <ClCompile Include="World\TerrainData.cpp" />
+    <ClCompile Include="World\TerrainFactory.cpp" />
+    <ClCompile Include="World\TerrainManager.cpp" />
+    <ClCompile Include="World\Water.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Font\Character.h" />
+    <ClInclude Include="Font\Font.h" />
+    <ClInclude Include="Font\FontFile.h" />
+    <ClInclude Include="Font\Line.h" />
+    <ClInclude Include="Font\Text.h" />
+    <ClInclude Include="Font\Word.h" />
+    <ClInclude Include="Graphics\Colour.h" />
+    <ClInclude Include="Graphics\Fermat.h" />
+    <ClInclude Include="Graphics\FloatBuffer.h" />
+    <ClInclude Include="Graphics\FrameBuffer.h" />
+    <ClInclude Include="Graphics\FrameEffect.h" />
+    <ClInclude Include="Graphics\IBuffer.h" />
+    <ClInclude Include="Graphics\IndexBuffer.h" />
+    <ClInclude Include="Graphics\lodepng.h" />
+    <ClInclude Include="Graphics\ModelData.h" />
+    <ClInclude Include="Graphics\Renderer.h" />
+    <ClInclude Include="Graphics\Shader.h" />
+    <ClInclude Include="Graphics\ShaderFactory.h" />
+    <ClInclude Include="Graphics\ShaderLoader.h" />
+    <ClInclude Include="Graphics\Skybox.h" />
+    <ClInclude Include="Graphics\Texture.h" />
+    <ClInclude Include="Graphics\UniformBuffer.h" />
+    <ClInclude Include="Graphics\VertexBuffer.h" />
+    <ClInclude Include="Graphics\View.h" />
+    <ClInclude Include="Include\Mutex.h" />
+    <ClInclude Include="Include\Object.h" />
+    <ClInclude Include="Management\Input.h" />
+    <ClInclude Include="Management\DataTypeSize.h" />
+    <ClInclude Include="Management\EntityControl.h" />
+    <ClInclude Include="Management\IDisposable.h" />
+    <ClInclude Include="Management\Logger.h" />
+    <ClInclude Include="Management\Manager.h" />
+    <ClInclude Include="Maths\MathHelper.h" />
+    <ClInclude Include="Maths\PerlinNoise.h" />
+    <ClInclude Include="Maths\Random.h" />
+    <ClInclude Include="Maths\StringHelper.h" />
+    <ClInclude Include="Maths\VectorMath.h" />
+    <ClInclude Include="Osiris.h" />
+    <ClInclude Include="Graphics\Projection.h" />
+    <ClInclude Include="Physics\EntityList.h" />
+    <ClInclude Include="Physics\PhysicsConstants.h" />
+    <ClInclude Include="Physics\PhysicsEntity.h" />
+    <ClInclude Include="Physics\PhysicsWorld.h" />
+    <ClInclude Include="Physics\Renderer_TS.h" />
+    <ClInclude Include="World\Biome.h" />
+    <ClInclude Include="World\Direction.h" />
+    <ClInclude Include="World\Entity.h" />
+    <ClInclude Include="World\EntityTree.h" />
+    <ClInclude Include="World\EntityTypes.h" />
+    <ClInclude Include="World\Landscape.h" />
+    <ClInclude Include="World\Light.h" />
+    <ClInclude Include="World\RayCaster.h" />
+    <ClInclude Include="World\Seed.h" />
+    <ClInclude Include="World\Terrain.h" />
+    <ClInclude Include="World\TerrainBuffer.h" />
+    <ClInclude Include="World\TerrainData.h" />
+    <ClInclude Include="World\TerrainFactory.h" />
+    <ClInclude Include="World\TerrainManager.h" />
+    <ClInclude Include="World\Water.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

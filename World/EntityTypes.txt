@@ -1,0 +1,12 @@
+0:EverGreenTree,EverGreenTree,EverGreenTree;
+1:AspenTree,EverGreenTree,AspenTree;
+2:CherryTree,EverGreenTree,CherryTree;
+3:PineTree,PineTree,PineTree;
+4:Fern,Fern,Wood;
+5:LargeFlatRock,LargeFlatRock,Rock;
+6:LargeRock,LargeRock,Rock;
+-7:MediumRock,MediumRock,Rock;
+8:Shrub,Shrub,Wood;
+-9:SmallRock,SmallRock,Rock;
+-10:TinyRock,TinyRock,Rock;
+11:RocketTree,PineTree,RocketTree;

@@ -1,0 +1,12 @@
+0:PineTree;
+s:1.0, PineSeedling, PineTree;
+s:1.1, PineSeedling, PineTree;
+s:1.2, PineBud, PineTree;
+s:1.3, PineTree, PineTree;
+s:1.3, PineTree, PineDormant;
+
+1:Sheep;
+s:1.0, Sheep, SheepBaby;
+s:1.1, Sheep, SheepBaby;
+s:1.2, Sheep, SheepMature;
+s:1.2, Sheep, SheepOld;
